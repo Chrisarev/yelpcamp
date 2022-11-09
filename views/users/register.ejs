@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="card col-4 offset-4 d-flex align-items-center">
+<img class="img-fluid w-100 rounded-top" alt="" src="https://res.cloudinary.com/dgz6d6j5h/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1667933873/YelpCamp/timothy-meinberg-xqV9QdGOSas-unsplash_pnm0lt.jpg">
+<h1 class="w-75">Register</h1>
+<form action="/register" class="validated-form w-75" method="POST" novalidate>
+    <div class="mb-3">
+        <label class="form-label" for="username">Username</label> 
+        <input class="form-control" type="text" id="username" name="username" required>
+        <div class="valid-feedback">Looks Good</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label> 
+        <input class="form-control" type="email" id="email" name="email" required>
+        <div class="valid-feedback">Looks Good</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label> 
+        <input class="form-control" type="password" id="password" name="password" required>
+        <div class="valid-feedback">Looks Good</div>
+    </div>
+    <button class="btn btn-success mb-3">Register</button>
+</form>
+</div>

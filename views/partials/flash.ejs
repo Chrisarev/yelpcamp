@@ -1,0 +1,17 @@
+<% if (success.length) { %> <%# if success is not empty%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= success %> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"></span>
+    </button>
+</div>
+<% }%> 
+
+<% if (error.length) { %> <%# if success is not empty%>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true"></span>
+        </button>
+    </div>
+    <% }%> 

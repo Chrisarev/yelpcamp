@@ -1,0 +1,37 @@
+    <% layout('layouts/boilerplate') %> <%# render this HTML as body inside of layouts/boilerplate.ejs %>
+    <div id="clusterMap"></div>
+    
+    <h1 class="mt-3">All Campgrounds</h1>
+    <div class="mb-2">
+        <a href="/campgrounds/new">Add Campground</a>
+    </div>
+        <% for(let campground of campgrounds) {%> <%# creates card for each campground%>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">  <%# takes up 4/12 of the space available in row for the image %>
+                        <% if(campground.images.length) {%>
+                            <img class="img-fluid" alt="" src="<%=campground.images[0].url%>">
+                        <% } else{%>
+                            <img src="img-fluid" alt="">
+                        <% } %> <%# if no image on campground, give default (none) %>
+                    </div>
+                    <div class="col-md-8"> <%# takes up 8/12 of the space available in row for card-body%>
+                        <div class="card-body">
+                            <h5 class="card-title"><%=campground.title%></h5>
+                            <p class="card-text"><%=campground.description%></p>
+                            <p class="card-text">
+                                <small class="text-muted"><%=campground.location%></small>
+                            </p>
+                            <a class="btn btn-primary" href="/campgrounds/<%=campground._id%>">View <%=campground.title%></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         <%} %>
+        
+         <%# passing objects from ejs to script requires < % - tag and stringify %>
+         <script>
+            const mapToken = <%-JSON.stringify(process.env.MAPBOX_TOKEN)%>;
+            let campgrounds = <%-JSON.stringify(campgrounds)%>
+        </script>
+         <script src="/javascripts/clusterMap.js"></script> 

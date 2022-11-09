@@ -182,6 +182,8 @@ app.use((err,req,res,next) => {
     ///sets response status property to status passed in and renders error template 
 })
 
-app.listen(3000, () =>{
-    console.log('Serving on Port 3000')
+///listen on heroku specified port or 3000 in dev environment 
+const port = process.env.PORT || 3000;
+app.listen(port, () =>{ 
+    console.log(`Serving on port ${port}`)
 })

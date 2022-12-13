@@ -16,15 +16,12 @@ font-family: 'Poppins', sans-serif;*/
     font-family: 'Raleway', sans-serif;
     width:100%;
     margin-top:25vh;
-    font-size: calc(2.8em + 3.5vmin);
+    font-size: calc(5em + 7vmin);
     font-weight:600;
     text-align: center;
     color:white;
     margin-bottom:0;
     line-height: 1;
-    text-shadow: 2px 1px 1px #000;
-
-    
 }
 
 .content h2{

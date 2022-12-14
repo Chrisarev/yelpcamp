@@ -22,18 +22,24 @@ font-family: 'Poppins', sans-serif;*/
     text-align: center;
     color:white;
     margin-bottom:0;
-    line-height: 1.1;
+    line-height: 1.2;
     transition: all 0.1s linear;
-    animation: fadeInFromTop 0.3s forwards; 
+    animation: fadeInFromTop 0.7s forwards; 
+    text-shadow: 0px 2px 2px black;
+    cursor:default;
 }
 
 .content h2{
+    opacity:0; 
     font-family: 'Poppins', sans-serif;
-    font-size: calc(1.2em + 1.5vmin);
+    font-size: calc(1.5em + 1.5vmin);
     font-weight: 500;
     color:white;
     text-align:center;
     text-shadow: 1px 1px 1px #000;
+    animation:fadeIn 0.8s forwards; 
+    animation-delay:0.5s; 
+    cursor:default;
 
 }
 
@@ -79,17 +85,16 @@ font-family: 'Poppins', sans-serif;*/
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    animation:fadeIn 0.3s forwards; 
-    animation-delay:0.4s; 
+    animation:fadeInFromBottom 0.5s forwards; 
 
 }
 
 .btn-hover:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .btn-hover:focus {
@@ -97,7 +102,7 @@ font-family: 'Poppins', sans-serif;*/
 }
 
 .btn-hover.color-8 {
-    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    background-image: linear-gradient(to right, #29323c, #29323c, #6253e1, #852D91);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
@@ -105,6 +110,15 @@ font-family: 'Poppins', sans-serif;*/
     from {
         opacity:0; 
         transform: translateY(-20px)
+    } to {
+        opacity:1;
+        transform:translateY(0); 
+    }
+}
+@keyframes fadeInFromBottom {
+    from {
+        opacity:0; 
+        transform: translateY(20px)
     } to {
         opacity:1;
         transform:translateY(0); 

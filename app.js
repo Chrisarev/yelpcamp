@@ -2,7 +2,6 @@ if(process.env.NODE_ENV !== "production"){
     require('dotenv').config(); 
 } ///environment variable that is either in dev or production mode
 
-
 const express = require('express') 
 const path = require('path') 
 const mongoose = require('mongoose'); ///connection between JS and mongodb

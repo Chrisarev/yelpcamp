@@ -7,3 +7,26 @@
     width:100%;
     height:300px; 
 }
+.customContainer{
+    width:100%; 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.customCard{
+    width:22rem; 
+    border:1px lightgray solid; 
+    border-radius:10px; 
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width:800px) {
+    .customCard{
+        width:15rem;
+    }
+    #clusterMap{
+        display:none;
+    }
+}

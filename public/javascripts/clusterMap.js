@@ -1,4 +1,3 @@
-
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
 container: 'clusterMap',

@@ -5,19 +5,20 @@ font-family: 'Poppins', sans-serif;*/
 .content{
     height:100vh;
     width:100vw;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(/camp.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(/camp.jpg) no-repeat center center fixed;
     background-size:cover;
     display:flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+/*
 .content h1{
     opacity:0; 
     font-family: 'Raleway', sans-serif;
     width:100%;
     margin-top:25vh;
-    font-size: calc(5em + 7vmin);
+    font-size: calc(5em + 1vmin);
     font-weight:600;
     text-align: center;
     color:white;
@@ -27,12 +28,42 @@ font-family: 'Poppins', sans-serif;*/
     animation: fadeInFromTop 0.7s forwards; 
     text-shadow: 0px 2px 2px black;
     cursor:default;
-}
+}*/
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    margin-top:25vh;
+    font-weight:600;
+    font-size: calc(5em + 1vmin);
+    text-transform:uppercase;
+    position:relative;
+    color:#FFF;
+    cursor:default;
+    transition: all 0.1s linear;
+    animation: fadeInFromTop 0.7s forwards; 
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.8);
+  }
+
+  h1:before{
+    content:"YELPCAMP";
+    position:absolute;
+    color:rgba(0,0,0,0.8);
+    top:0;
+    left:0;
+    width:0%;
+    overflow:hidden;
+    transition:all 0.5s;
+  }
+
+  h1:hover:before{
+    width:100%;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0);
+  }
 
 .content h2{
     opacity:0; 
     font-family: 'Poppins', sans-serif;
-    font-size: calc(1.5em + 1.5vmin);
+    font-size: calc(1.5em + 1vmin);
     font-weight: 500;
     color:white;
     text-align:center;
@@ -79,7 +110,6 @@ font-family: 'Poppins', sans-serif;*/
     text-align:center;
     border: none;
     background-size: 300% 100%;
-
     border-radius: 50px;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -129,5 +159,20 @@ font-family: 'Poppins', sans-serif;*/
         opacity:0; 
     }to {
         opacity:1; 
+    }
+}
+
+@media (max-width:800px) {
+    .content h1{
+        font-size:calc(3em + 1vmin); 
+    }
+    .content h2{
+        width:80vw;
+        font-size:calc(1em + 1.6vmin); 
+    }
+    .content button{
+        font-size:calc(0.4em + 0.6vmin); 
+        width:7rem;
+        height:3rem;
     }
 }

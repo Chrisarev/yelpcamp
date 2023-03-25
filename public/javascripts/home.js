@@ -1,4 +1,5 @@
 let aniBottom = document.querySelectorAll('.aniBottom'); 
+
 function elementInViewport2(el) {
     var top = el.offsetTop;
     var left = el.offsetLeft;
@@ -15,7 +16,7 @@ function elementInViewport2(el) {
       (top + height) > window.pageYOffset &&
       (left + width) > window.pageXOffset
     );
-  }
+}
 
 function animateIfScrolled() {
   for(let i =0;i<aniBottom.length; i++)

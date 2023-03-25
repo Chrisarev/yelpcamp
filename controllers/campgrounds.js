@@ -3,11 +3,9 @@ const {isLoggedIn, isAuthor, validateCampground} = require('../middleware')
 ///requires methods from middleware.js
 //require paths need .. instead of one because this file is inside of routes folder
 const Campground = require('../models/campground') //require mongoose model campground.js
-
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({accessToken: mapBoxToken}) //starts new mapbox client
-
 const {cloudinary} = require('../cloudinary');
 
 module.exports.index = async (req,res) =>{

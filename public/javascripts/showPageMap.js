@@ -1,6 +1,5 @@
 mapboxgl.accessToken = mapToken;
 ///turns JSON String into JS object so we can use properties
-
 const map = new mapboxgl.Map({
 container: 'showMap', // container ID
 style: 'mapbox://styles/mapbox/streets-v11', // style URL
